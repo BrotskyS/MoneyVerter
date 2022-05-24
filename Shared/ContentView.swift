@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var coreModel = CoreDataService()
     var body: some View {
-        Text("Hello, world!")
-        
+        HomeView()
+            .environmentObject(coreModel)
     }
 }
 
